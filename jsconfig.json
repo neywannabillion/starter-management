@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@static/*": [
+                "./public/static/*"
+            ],
+            "@components/*": [
+                "./components/*"
+            ],
+            "@libs/*": [
+                "./libs/*"
+            ],
+            "@store/*": [
+                "./store/*"
+            ],
+        },
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": false
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
