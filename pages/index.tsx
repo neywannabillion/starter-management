@@ -1,9 +1,12 @@
-import React, { ReactElement } from 'react';
+import React, { FC } from 'react';
+import { Box } from "@mui/material";
 
-export default function Home(): ReactElement {
+const Index: FC = () => {
   return (
     <>
-    สวัสดี
+      <Box>เนื้อหา</Box>
     </>
-  );
+  )
 }
+
+export default Index
