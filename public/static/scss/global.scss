@@ -80,3 +80,9 @@ body {
         background-position: 180px;
     }
 }
+
+@media screen and (max-width: 1060px) {
+    .container-body {
+        margin-left: 70px;
+    }
+}
