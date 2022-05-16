@@ -359,13 +359,21 @@
 }
 
 .burger-menu {
-    position: absolute;
+    position: fixed;
+    z-index: 10;
+    display: none;
+    height: 35px;
+    width: 100%;
+    background-color: #338f6c;
     font-size: 25px;
-    color: #338f6c;
+    color: white;
     padding: 10px;
     & .burger-icon-menu {
-        display: none;
+        display: flex;
+        width: fit-content;
         cursor: pointer;
+        align-items: center;
+        height: 100%;
     }
 }
 
@@ -406,7 +414,7 @@
 }
 
 @media screen and (max-width: 500px) {
-    .burger-icon-menu {
+    .burger-menu {
         display: block !important;
     }
     .contain-sidebar {

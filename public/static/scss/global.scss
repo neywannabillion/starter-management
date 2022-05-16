@@ -8,6 +8,7 @@
 }
 
 body {
+    overscroll-behavior: none;
     min-height: 100vh;
     margin: 0px;
     -webkit-font-smoothing: antialiased;
@@ -84,5 +85,11 @@ body {
 @media screen and (max-width: 1060px) {
     .container-body {
         margin-left: 70px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container-body {
+        padding-top: 70px;
+        margin: 0 5px;
     }
 }
