@@ -19,8 +19,6 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <link rel="icon" type="image/x-icon" href="/static/assets/logo/bbttlogoiconpng.png" />
-                    <link rel="shortcut icon" type="image/x-icon" href="/static/assets/logo/bbttlogoiconpng.png" />
                     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@200;400;700&display=swap" rel="stylesheet" />
                 </Head>
                 <body>

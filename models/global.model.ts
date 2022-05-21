@@ -5,3 +5,7 @@ export interface AuthenProps {
 export interface MenuProps {
     _menuList?: any[];
 }
+
+export interface LoginProps {
+    _loginAction : () => void
+}

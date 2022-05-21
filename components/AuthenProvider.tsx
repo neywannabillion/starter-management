@@ -3,20 +3,30 @@ import { AuthenProps } from '../models/global.model'
 import Lottie from 'lottie-react';
 import { Box } from '@mui/material';
 import FaceScaning from '../public//static/lotties/face-scanning.json'
+import { useRouter } from 'next/router'
+import Login from './Login'
 
 const AuthenProvider: FC = ({ children }: AuthenProps) => {
+    const router = useRouter()
     const [authenticating, setAuthenticating] = useState(true);
     const [authorized, setAuthorized] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
             setAuthenticating(false)
-            setAuthorized(true)
+            if (!!localStorage.getItem('authKey')) {
+                setAuthorized(true)
+            } else {
+                setAuthorized(false)
+            }
         }, 2000)
-    }, [])
 
+    }, [])
+    const loginAction = () => {
+        setAuthorized(true)
+    }
     return (
-        <Box style={{zIndex: 99999}}>
+        <Box style={{ zIndex: 99999 }}>
             {authenticating ?
                 <>
                     <Box
@@ -65,9 +75,7 @@ const AuthenProvider: FC = ({ children }: AuthenProps) => {
                 authorized ?
                     children
                     :
-                    <Box>
-
-                    </Box>
+                    <Login _loginAction={loginAction} />
             }
         </Box>
     )
